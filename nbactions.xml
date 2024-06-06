@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:exec</goal>
+            </goals>
+            <properties>
+                <exec.vmArgs></exec.vmArgs>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+                <exec.appArgs></exec.appArgs>
+                <exec.mainClass>Classes.MotorPHEmployeePortal</exec.mainClass>
+                <exec.executable>java</exec.executable>
+            </properties>
+        </action>
+        <action>
+            <actionName>debug</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:exec</goal>
+            </goals>
+            <properties>
+                <exec.vmArgs>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+                <exec.appArgs></exec.appArgs>
+                <exec.mainClass>Classes.MotorPHEmployeePortal</exec.mainClass>
+                <exec.executable>java</exec.executable>
+                <jpda.listen>true</jpda.listen>
+            </properties>
+        </action>
+        <action>
+            <actionName>profile</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:exec</goal>
+            </goals>
+            <properties>
+                <exec.vmArgs></exec.vmArgs>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+                <exec.mainClass>Classes.MotorPHEmployeePortal</exec.mainClass>
+                <exec.executable>java</exec.executable>
+                <exec.appArgs></exec.appArgs>
+            </properties>
+        </action>
+        <action>
+            <actionName>CUSTOM-enable preview</actionName>
+            <displayName>enable preview</displayName>
+            <goals>
+                <goal>cd</goal>
+                <goal>/Users/paulomolina/NetBeansProjects/MotorPHEmployeePortalFinal;</goal>
+                <goal>JAVA_HOME=/Users/paulomolina/Library/Java/JavaVirtualMachines/openjdk-22.0.1/Contents/Home</goal>
+                <goal>"/Volumes/Intel</goal>
+                <goal>670p</goal>
+                <goal>Series/Applications/Apache</goal>
+                <goal>NetBeans.app/Contents/Resources/netbeans/java/maven/bin/mvn"</goal>
+                <goal>-Dexec.vmArgs="-Dexec.args=${exec.vmArgs}</goal>
+                <goal>--enable-preview</goal>
+                <goal>-classpath</goal>
+                <goal>%classpath</goal>
+                <goal>${exec.mainClass}</goal>
+                <goal>${exec.appArgs}"</goal>
+                <goal>-Dexec.appArgs=</goal>
+                <goal>-Dexec.mainClass=Classes.MotorPHEmployeePortal</goal>
+                <goal>-Dexec.executable=/Users/paulomolina/Library/Java/JavaVirtualMachines/openjdk-22.0.1/Contents/Home/bin/java</goal>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:3.1.0:exec</goal>
+            </goals>
+        </action>
+    </actions>
